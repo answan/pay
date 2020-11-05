@@ -51,13 +51,13 @@ public class Payment {
 
             //Following code causes dependency to external APIs
             // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
-            phoneseller.external.Promotion promotion = new phoneseller.external.Promotion();
-            promotion.setOrderId(getOrderId());
-            promotion.setPoint((double)-1);
-            promotion.setProcess("PayCancelled");
+            phoneseller.external.Reward reward = new phoneseller.external.Reward();
+            reward.setOrderId(getOrderId());
+            reward.setPoint((double)-1);
+            reward.setProcess("PayCancelled");
             // mappings goes here
-            PayApplication.applicationContext.getBean(phoneseller.external.PromotionService.class)
-                    .payCancel(promotion);
+            PayApplication.applicationContext.getBean(phoneseller.external.RewardService.class)
+                    .payCancel(reward);
 
             System.out.println("***** 결재 취소 완료 *****");
         }

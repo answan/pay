@@ -1,6 +1,6 @@
 package phoneseller.external;
 
-public class Promotion {
+public class Reward {
 
     private Long id;
     private Long orderId;
