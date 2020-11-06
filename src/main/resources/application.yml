@@ -40,7 +40,7 @@ server:
 
 api:
   url:
-    reward: http://localhost:8086
+    reward: http://localhost:8083
 ---
 
 spring:
@@ -78,4 +78,4 @@ hystrix:
 
 api:
   url:
-    reward: http://reward:8080
+    reward: ${configurl}
