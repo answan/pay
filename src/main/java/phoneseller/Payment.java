@@ -42,6 +42,12 @@ public class Payment {
     @PreUpdate
     public void onPreUpdate(){
         if("OrderCancelled".equals(process)) {
+            try {
+                Thread.currentThread().sleep((long) (400 + Math.random() * 220));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            
             System.out.println("***** 결재 취소 중 *****");
             setProcess("PayCancelled");
             setPrice((double) 0);
