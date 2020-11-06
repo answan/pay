@@ -40,7 +40,7 @@ server:
 
 api:
   url:
-    reward: http://localhost:8083
+    reward: http://localhost:8086
 ---
 
 spring:
